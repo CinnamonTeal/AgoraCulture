@@ -8,6 +8,12 @@ task :fetch => [:environment] do
 
   	accepts_ebt = hash["facilityaddinfo"].match(/No EBT Accepted/) ? false : true
 
-  	Market.create(:name => hash["facilityname"], :address => hash["facilitystreetname"], :zipcode => hash["facilityzipcode"], :latitude => hash["latitude"], :longitude => hash["longitude"], :accepts_ebt => accepts_ebt)
-   end
+  	if Market.all.nil?
+  		Market.create(:name => hash["facilityname"], :address => hash["facilitystreetname"], :zipcode => hash["facilityzipcode"], :latitude => hash["latitude"], :longitude => hash["longitude"], :accepts_ebt => accepts_ebt)
+  	else
+  		market_names = Market.all.each_with_object([]){|market, array| array << market.name}
+
+  		Market.create(:name => hash["facilityname"], :address => hash["facilitystreetname"], :zipcode => hash["facilityzipcode"], :latitude => hash["latitude"], :longitude => hash["longitude"], :accepts_ebt => accepts_ebt) if !market_names.include?(hash["facilityname"])
+  	end
+  end
 end
