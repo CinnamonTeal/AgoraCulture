@@ -1,6 +1,16 @@
-To Do
 
-- build map view
-  - we need to get users lat/lon 
-  - restrict map results to < 1 mile or something
-- talk to blake about search 
+TODAY
+
+we want to dynamically generate all the markers for each market on the map by pointlessly accessing the database
+
+get the map to respond to users location   - related task is to get the location button to talk to the map generator (GET req params) (zip code search and find button)
+
+
+    farmers markets have many reviews
+    yelp api
+    build out our own reviews
+      user submitted reviews
+      login with fb or twitter 
+
+
+icing on the cake: I want to get each marker on the map to be clickable with a little pop up window that has info about that market and a link to that market's webpage
