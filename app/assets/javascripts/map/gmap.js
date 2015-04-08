@@ -1,5 +1,6 @@
 var geocoder;
 var map;
+
 function initialize() {
   geocoder = new google.maps.Geocoder();
   var latlng = new google.maps.LatLng(40.697325, -73.986014);
@@ -17,6 +18,12 @@ function addPin(market) {
 
   var marker = new google.maps.Marker({
     map: map,
-    position: marketLatlng
+    position: marketLatlng,
+    title: "blah",
+    url: "http://www.google.com" 
+  });
+
+  google.maps.event.addListener(marker, "click", function(){
+    window.open("https://www.google.com");
   });
 }
