@@ -21,8 +21,8 @@ ActiveRecord::Schema.define(version: 20150406185313) do
     t.string  "name"
     t.string  "address"
     t.string  "zipcode"
-    t.integer "longitude"
-    t.integer "latitude"
+    t.float   "longitude"
+    t.float   "latitude"
     t.boolean "accepts_ebt"
     t.integer "city_id"
   end
