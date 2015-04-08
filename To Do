@@ -1,7 +1,4 @@
-
 TODAY
-
-we want to dynamically generate all the markers for each market on the map by pointlessly accessing the database
 
 get the map to respond to users location   - related task is to get the location button to talk to the map generator (GET req params) (zip code search and find button)
 
