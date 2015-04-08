@@ -1,11 +1,8 @@
-<!DOCTYPE html>
-<html>
-<head>
-  <title>AgoraCulture</title>
-</head>
-<body>
-
   <center><h1>AgoraCulture</h1></center>
+  
+  <%= javascript_tag do %>
+    var marketPins = <%= @pin_json %>;
+  <% end %>
 
   <style> 
     html, body, #map-canvas {
@@ -26,14 +23,15 @@
   </style>
 
   <script src="https://maps.googleapis.com/maps/api/js?v=3"></script>
-  <script src="/./assets/javascripts/map/gmap.js"></script>
-  <script> google.maps.event.addDomListener(window, 'load', initialize); </script>
+  <script> 
+    google.maps.event.addDomListener(window, 'load', initialize);
+    $.each (marketPins, function(i, market) {
+      addPin(market);
+    });
+  </script>
 
-  <div id="panel">
+<!--   <div id="panel">
     <input id="address" type="textbox" value="Brooklyn, NY">
     <input type="button" value="Geocode" onclick="codeAddress()">
-  </div>
+  </div> -->
   <div id="map-canvas"></div>
-  
-</body>
-</html>
