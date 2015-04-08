@@ -31,6 +31,8 @@ ActiveRecord::Schema.define(version: 20150408213454) do
     t.string   "title"
     t.integer  "rating"
     t.text     "comment"
+    t.integer  "city_id"
+    t.integer  "market_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
