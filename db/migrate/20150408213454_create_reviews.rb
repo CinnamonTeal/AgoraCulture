@@ -6,6 +6,7 @@ class CreateReviews < ActiveRecord::Migration
       t.text :comment
       t.belongs_to :city
       t.belongs_to :market
+      
 
       t.timestamps null: false
     end
