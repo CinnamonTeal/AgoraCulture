@@ -31,7 +31,7 @@ ActiveRecord::Schema.define(version: 20150408213454) do
     t.string   "title"
     t.integer  "rating"
     t.text     "comment"
-    t.integer  "city_id"
+    t.integer  "user_id"
     t.integer  "market_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -39,8 +39,13 @@ ActiveRecord::Schema.define(version: 20150408213454) do
 
   create_table "users", force: :cascade do |t|
     t.string   "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.string   "provider"
+    t.string   "uid"
+    t.string   "image"
+    t.string   "oauth_token"
+    t.string   "oauth_expires_at"
+    t.datetime "created_at",       null: false
+    t.datetime "updated_at",       null: false
   end
 
 end
