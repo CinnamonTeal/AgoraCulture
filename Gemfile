@@ -23,11 +23,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Figaro hides sensitive data like API keys from public repositories
 gem 'figaro'
 
-
 # Omniauth
 gem 'omniauth'
 
-#
+# google omniauth
+gem "omniauth-google-oauth2"
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
