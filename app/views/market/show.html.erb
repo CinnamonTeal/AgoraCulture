@@ -1,1 +1,15 @@
-<%= @market.name %>
+<center>
+<h2><%= @market.name %></h2> 
+<br>
+<h6><%= @market.address %></h6>
+<br>
+Image goes here!
+<br>
+<% @market.reviews.each do |review| %>
+<%= review.rating %>
+<br>
+<%= review.title %>
+<br>
+<%= review.comment %>
+<% end %>
+</center>
