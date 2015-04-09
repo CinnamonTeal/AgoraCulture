@@ -150,14 +150,11 @@ GEM
     omniauth (1.2.2)
       hashie (>= 1.2, < 4)
       rack (~> 1.0)
-<<<<<<< HEAD
     omniauth-google-oauth2 (0.2.6)
       omniauth (> 1.0)
       omniauth-oauth2 (~> 1.1)
-=======
     omniauth-facebook (2.0.1)
       omniauth-oauth2 (~> 1.2)
->>>>>>> 7fb220287b42177d8a9a075dcf5664ade4d5308b
     omniauth-oauth2 (1.2.0)
       faraday (>= 0.8, < 0.10)
       multi_json (~> 1.3)
