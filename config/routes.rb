@@ -5,6 +5,12 @@ Rails.application.routes.draw do
   get "/market/:id", to: "market#show"
   get "/user/:id", to: "user#show"
 
+  #facebook routes
+
+  get 'auth/:provider/callback', to: 'sessions#create'
+  get 'auth/failure', to: redirect('/')
+  get 'signout', to: 'sessions#destroy', as: 'signout'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
