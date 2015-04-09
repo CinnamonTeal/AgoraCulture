@@ -1,7 +1,9 @@
 Rails.application.routes.draw do
 
-  get "/" => "home_page#index"
-  get "/map" => "map#index"
+  get "/", to: "home_page#index"
+  get "/map", to: "map#index"
+  get "/market/:id", to: "market#show"
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
