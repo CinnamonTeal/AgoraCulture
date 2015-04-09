@@ -299,11 +299,8 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   omniauth
-<<<<<<< HEAD
   omniauth-google-oauth2
-=======
   omniauth-facebook
->>>>>>> 7fb220287b42177d8a9a075dcf5664ade4d5308b
   pg
   pry
   rails (= 4.2.0)
