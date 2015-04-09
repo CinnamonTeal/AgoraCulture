@@ -1,17 +1,28 @@
 <center>
-<h2><%= @market.name %></h2> 
-<br>
-<h6><%= @market.address %></h6>
-<br>
-<%= image_tag "#{rand(1...14)}.jpg" %>
-<br>
-<% @market.reviews.each do |review| %>
-<%= review.rating %>
-<br>
-<%= review.title %>
-<br>
-<%= review.comment %>
-<br>
-<%= review.user.name %>
-<% end %>
+  <h2><%= @market.name %></h2> 
+  <br>
+  <h6><%= @market.address %></h6>
+  <br>
+  <%= image_tag "#{rand(1...14)}.jpg" %>
+  <br>
+  <% @market.reviews.each do |review| %>
+  <%= review.rating %>
+  <br>
+  <%= review.title %>
+  <br>
+  <%= review.comment %>
+  <br>
+  <%= review.user.name %>
+  <% end %>
 </center>
+
+<%= form_tag("/new", method: "post") do %><br>
+<%= label_tag("Title") %><br>
+<%= text_field_tag(:title) %><br>
+<%= label_tag("Rating") %><br>
+<%= number_field_tag(:rating, nil, in: 1..5) %><br>
+<%= label_tag("Comments") %><br>
+<%= text_area_tag(:comment) %><br>
+<%= submit_tag("Submit Review") %>
+<% end %>
+<!-- <button action="POST/reviews/new">"Submit"</button> -->
