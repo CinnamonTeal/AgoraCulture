@@ -7,7 +7,6 @@ class CreateReviews < ActiveRecord::Migration
       t.belongs_to :city
       t.belongs_to :market
       
-
       t.timestamps null: false
     end
   end
