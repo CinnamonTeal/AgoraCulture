@@ -3,7 +3,7 @@
 <br>
 <h6><%= @market.address %></h6>
 <br>
-Image goes here!
+<%= image_tag "#{rand(1...14)}.jpg" %>
 <br>
 <% @market.reviews.each do |review| %>
 <%= review.rating %>
