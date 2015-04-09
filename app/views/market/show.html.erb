@@ -1,17 +1,17 @@
 <center>
-<h2><%= @market.name %></h2> 
-<br>
-<h6><%= @market.address %></h6>
-<br>
-<%= image_tag "#{rand(1...14)}.jpg" %>
-<br>
-<% @market.reviews.each do |review| %>
-<%= review.rating %>
-<br>
-<%= review.title %>
-<br>
-<%= review.comment %>
-<br>
-<%= review.user.name %>
-<% end %>
+	<h2><%= @market.name %></h2> 
+	<br>
+	<h6><%= @market.address %></h6>
+	<br>
+	<%= image_tag "#{rand(1...14)}.jpg" %>
+	<br>
+	<% @market.reviews.each do |review| %>
+	<%= review.rating %>
+	<br>
+	<%= review.title %>
+	<br>
+	<%= review.comment %>
+	<br>
+	<%= review.user.name %>
+	<% end %>
 </center>
