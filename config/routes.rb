@@ -2,17 +2,21 @@ Rails.application.routes.draw do
 
   get "/", to: "home_page#index"
   get "/map", to: "map#index"
+  
+  ## using more RESTful routes:
+  # resources :users
+  # resources :market, :only => "show"
+  # resources :reviews
   get "/market/:id", to: "market#show"
   get "/user/:id", to: "user#show"
-  resources :users, :only => "show"
-  #facebook routes
+  post '/reviews', to: 'review#create'
 
+  ## facebook routes
   # get 'auth/:provider/', to: 'sessions#create'
   get 'auth/:provider/callback', to: 'sessions#create'
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  post '/reviews', to: 'review#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
