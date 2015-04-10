@@ -72,3 +72,4 @@ group :production do
 end
 
 gem 'bootstrap-sass', '~> 3.1.1'
+gem 'autoprefixer-rails' # Automatically adds the proper vendor prefixes to the CSS code when it is compiled.
