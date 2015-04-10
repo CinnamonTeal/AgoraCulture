@@ -16,7 +16,10 @@
   <% end %>
 </center>
 
+<%=  %>form_for([@market, Review.new]) %>
 <%= form_tag("/new", method: "post") do %><br>
+<%= hidden_field_tag :user_id, value = current_user.id %>
+<%= hidden_field_tag :market_id, value = @market.id %>
 <%= label_tag("Title") %><br>
 <%= text_field_tag(:title) %><br>
 <%= label_tag("Rating") %><br>
@@ -25,4 +28,3 @@
 <%= text_area_tag(:comment) %><br>
 <%= submit_tag("Submit Review") %>
 <% end %>
-<!-- <button action="POST/reviews/new">"Submit"</button> -->

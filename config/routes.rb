@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   get "/map", to: "map#index"
   get "/market/:id", to: "market#show"
   get "/user/:id", to: "user#show"
-
+  resources :users, :only => "show"
   #facebook routes
 
   # get 'auth/:provider/', to: 'sessions#create'
@@ -12,7 +12,7 @@ Rails.application.routes.draw do
   get 'auth/failure', to: redirect('/')
   get 'signout', to: 'sessions#destroy', as: 'signout'
 
-  post '/new', to: 'review#new'
+  post '/reviews', to: 'review#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
