@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   has_many :reviews
 
+  validates :name, :uid, :provider, :image, :oauth_token, :oauth_expires_at, presence: true
+  validates :name, :uid, uniqueness: true
+
   def self.create_with_omniauth(auth)
   	User.create(
   		:name => auth.info.name,
