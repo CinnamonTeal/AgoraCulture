@@ -14,5 +14,6 @@
 //= require jquery_ujs
 //= require bootstrap
 //= require_tree ../../../vendor/assets/javascripts/.
+//= require_tree ../../../app/assets/javascripts/.
 //= require map/gmap.js
 //= require_tree .
