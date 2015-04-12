@@ -1,0 +1,16 @@
+<center>
+<% if @user.image.match(/(\?sz=50)/) %>
+	<% @user.image = @user.image.gsub(/(\?sz=50)/, "") %>
+<% end %>
+<%= image_tag "#{@user.image}?type=large" %>
+<br>
+<%= @user.name %>
+<br>
+<h3>Reviews</h3>
+<% @user.reviews.each do |review| %>
+	<%= review.comment %>
+<% end %>
+</center>
+
+<!-- we need to add a logout -->
+<!-- reviews are not displaying -->

@@ -1,0 +1,14 @@
+TODAY
+
+get the map to respond to users location   - related task is to get the location button to talk to the map generator (GET req params) (zip code search and find button)
+
+
+    farmers markets have many reviews
+    yelp api
+    build out our own reviews
+      user submitted reviews
+      login with fb or twitter 
+
+get twitter feeds from markets on the market show pages 
+
+icing on the cake: I want to get each marker on the map to be clickable with a little pop up window that has info about that market and a link to that market's webpage
