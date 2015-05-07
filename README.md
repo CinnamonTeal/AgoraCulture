@@ -1,7 +1,5 @@
 # Agoraculture
 
-## Description
-
 ## Setup
 
 Once you have cloned the repo, you'll need to make sure your environment is setup.
