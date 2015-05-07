@@ -1,25 +1,33 @@
 # Agoraculture
 
-## Description
+## Setup
 
-Add a short description of your app.
+Once you have cloned the repo, you'll need to make sure your environment is setup.
 
-## Screenshots
+Things you'll need: 
+  
+  - Homebrew ($ ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)")
+  - Ruby ($ brew install ruby)
+  - Rails ($ gem install rails)
+  - Rake ($ gem install rake)
 
-Add some spiffy screenshots of your app here.
+## Getting Started:
 
-## Background
+In terminal (in the directory of the app) begin with 
 
-Why did you want to make this app? What was your development process
-like?
+  $ rake db:migrate
 
-## Features
+Then do:
 
-Bullet point some of the key features of your app here.
+  $ rake db:seed
 
-## Usage
+and then do 
 
-How do users use your app?
+  $ rails s
+
+and that should get the app up and running on localhost://3000 in your web browser, where you can interact with the app.
+
+in a different terminal window or tab, run "$ rails c" to open up the rails console where you can toy around with the app and debug.
 
 ## Development/Contribution
 
