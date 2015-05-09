@@ -68,7 +68,7 @@ end
 group :production do
   gem 'pg'
   gem 'google-analytics-rails'
-  gem 'rails_12factor'
+  gem 'rails_12factor' # for deploying on heroku; rails 4 no longer supports plugins, forces heroku to use gems instead.
 end
 
 gem 'bootstrap-sass', '~> 3.1.1'
